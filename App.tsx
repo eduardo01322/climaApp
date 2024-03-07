@@ -10,7 +10,8 @@ function App(): React.JSX.Element {
       
       <View style={styles.detailsContainer}>
         <Text style={styles.temperature}>55 °C</Text>
-        <Image source={require('./src/assets/imagens/icon3.png')}/>
+        <Image source={require('./src/assets/imagens/icon3.png')}
+        style={styles.weatherIcon}/>
       </View>
 
       <View>
@@ -19,14 +20,19 @@ function App(): React.JSX.Element {
         <Text style={styles.text}>Probabilidade de chuva 78%</Text>
         <Text style={styles.text}>Umidade: 99%</Text>
       </View>
-      <Image source={require('./src/assets/imagens/cidade.png')}/>
+      <Image source={require('./src/assets/imagens/cidade.png')}
+      style={styles.bottomImage}/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   bottomImage: {
-
+    width: '115%',
+    position: 'absolute',
+    bottom: 0,
+    resizeMode: 'cover',
+    height: '57%'
   },
   header: {
     flexDirection: 'row',
